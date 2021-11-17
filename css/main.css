@@ -1,0 +1,66 @@
+.d0f9-container {
+    position: fixed;
+    width: 50px;
+    left: 20px;
+    bottom: 40px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 999999999999;
+}
+.d0f9-content {
+    background-color: #ff402d;
+    color: white;
+    padding: 15px 0 25px 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    text-align: center;
+    width: 100%;
+}
+.d0f9-upload {
+    position: absolute;
+    top: 160px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #ff402d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+.d0f9-loading {
+    width: 20px;
+    height: 20px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: rotate 1s ease infinite forwards;
+}
+
+.d0f9-message {
+    z-index: 999999999999;
+    background-color: #ff402d;
+    position: fixed;
+    left: 90px;
+    bottom: 25px;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    font-size: 13px;
+    padding: 0 15px;
+    display: none;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

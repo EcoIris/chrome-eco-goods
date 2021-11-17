@@ -1,0 +1,68 @@
+html, body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.table {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table > thead > tr > th {
+    background-color: #eee;
+    border-bottom: 1px solid #ddd;
+}
+
+.table > tbody > tr > td {
+
+}
+
+div.checkbox {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #888;
+    position: relative;
+    box-sizing: border-box;
+}
+
+div.checkbox:hover {
+    border-color: #222;
+}
+
+div.checkbox.checked::after {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 9px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.block {
+    margin: 10px;
+}
+
+div.button {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    cursor: default;
+    user-select: none;
+}
+
+div.button:hover {
+    background-color: #d6d6d6;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NYB</title>
+    <style>
+        html, body {
+            width: 210px;
+            padding: 0;
+            margin: 0;
+            user-select: none;
+        }
+
+        .message {
+            text-align: center;
+            overflow: hidden;
+            color: white;
+            line-height: 26px;
+            height: 26px;
+            margin: 0 20px;
+        }
+
+        .message > div {
+            background-color: #f0d082;
+        }
+
+        .info {
+            display: flex;
+            padding: 10px 20px;
+        }
+
+        .info > div.item {
+            width: 50%;
+            text-align: center;
+        }
+
+        .info .title {
+            font-size: 40px;
+            color: #02c286;
+        }
+
+        .info .description {
+
+        }
+
+        .button {
+            margin: 30px 20px 20px 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button > div.item {
+            padding: 6px 0;
+            cursor: default;
+            font-size: 12px;
+            text-align: center;
+            color: white;
+            border-radius: 4px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .button > div.upload {
+            background-color: #02b47b;
+        }
+
+        .button > div.upload:hover {
+            background-color: #02ad74;
+        }
+
+        .button > div.get {
+            background-color: #918ad0;
+        }
+
+        .button > div.get:hover {
+            background-color: #8a83c3;
+        }
+
+        .name {
+            margin: 0 20px;
+            color: #888;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="message" id="message"></div>
+<div class="name" id="name">商品名称</div>
+<div class="info">
+    <div class="item">
+        <div class="title" id="main">0</div>
+        <div class="description">主图</div>
+    </div>
+    <div class="item">
+        <div class="title" id="detail">0</div>
+        <div class="description">详情</div>
+    </div>
+</div>
+<div class="button">
+<!--    <div class="item get" id="get">获取</div>-->
+    <div class="item upload" id="upload">上传</div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "eco-snatch",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "description": "商品一键抓取",
+  "browser_action": {
+    "default_icon": "image/icon.png",
+    "default_title": "eco-snatch"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "css": ["css/main.css"],
+    "js": ["js/jquery.min.js", "js/main.js"],
+    "run_at": "document_start",
+    "all_frames": false
+  }],
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": ["js/image.wasm", "js/image.js"]
+}

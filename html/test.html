@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取商品详情</title>
+</head>
+<body>
+<style>
+    .item div {
+        margin: 5px 5px;
+    }
+    .color-list span {
+        margin-right: 5px;
+    }
+    .size-list span {
+        margin-right: 5px;
+    }
+    .cover span img {
+        width: 50px;
+    }
+    .desc span img {
+        width: 50px;
+    }
+</style>
+<button class="get_item">获取商品详情</button>
+<div class="item">
+    <div>店铺名：<span class="shop"></span></div>
+    <div>商品名：<span class="title"></span></div>
+    <div>视频地址：<span class="video"></span></div>
+    <div>价格：<span class="price"></span></div>
+    <div class="color-list">颜色：</div>
+    <div class="size-list">尺码：</div>
+    <div class="cover">主图：</div>
+    <div class="desc">描述：</div>
+</div>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<script>
+    $(function () {
+      $('.get_item').on('click', function () {
+          let ele = document.getElementById('ext-data');
+          if (!ele || ele.innerText === '{}') {
+              alert('数据不存在，请刷新后再试');
+              return;
+          }
+          const data = JSON.parse(ele.innerText);
+          console.log(data);
+          if (!data) {
+              alert('插件数据无效，请重新获取');
+              return;
+          }
+
+          $('.shop').text(data.shop);
+          $('.title').text(data.title);
+          $('.video').text(data.video);
+          $('.price').text(data.price);
+
+          let color = '<span>颜色：</span>';
+          data.color.map(value => {
+              color += '<span>'+value+'</span>'
+          });
+          $('.color-list').html(color);
+
+          let size = '<span>尺码：</span>';
+          data.size.map(value => {
+              size += '<span>'+value+'</span>'
+          });
+          $('.size-list').html(size);
+
+          let desc = '<span>主图：</span>';
+          data.images.map(value => {
+              desc += '<span><img src="'+value+'"></span>'
+          });
+          $('.cover').html(desc);
+
+          let detail = '<span>描述：</span>';
+          data.detail.map(value => {
+              detail += '<span><img src="'+value+'"></span>'
+          });
+          $('.desc').html(detail);
+      });
+    })
+</script>
+</body>
+</html>

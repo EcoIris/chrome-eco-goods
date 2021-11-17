@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/goods.css" />
+</head>
+<body>
+<div class="block">
+    <div class="button">打印</div>
+</div>
+<div class="block">
+    <table class="table" id="table">
+        <thead>
+        <tr>
+            <th width="12"><div class="checkbox"></div></th>
+            <th width="30">序号</th>
+            <th width="50">SKU ID</th>
+            <th width="100">商品ID</th>
+            <th width="50">地区</th>
+            <th width="60">档口</th>
+            <th width="60">货号</th>
+            <th width="40">颜色</th>
+            <th width="40">尺码</th>
+            <th width="40">单价</th>
+            <th width="40">数量</th>
+            <th width="50">归属</th>
+            <th width="40">件数</th>
+            <th width="140">订单</th>
+            <th width="120">时间</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="16" style="text-align: center;">加载中...</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<iframe src="http://192.168.1.113:3000/product/print" width="100%" frameborder="0" height="300"></iframe>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/goods.js"></script>
+</body>
+</html>
