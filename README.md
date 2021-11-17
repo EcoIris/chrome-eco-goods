@@ -17,7 +17,7 @@ let token = {//七牛云token
     'image': '',//图片上传token
 };
 ```
-# 使用
+# 使用  
 1.将项目装入谷歌浏览器拓展程序中并打开
 
 2.打开对应的网站进入商品详情页面即可看到插件
@@ -31,3 +31,4 @@ if (!ele || ele.innerText === '{}') {
 const data = JSON.parse(ele.innerText);
 console.log(data);
 ```
+- [更详细的使用步骤](https://www.cnblogs.com/52lnamp/p/15567899.html)
