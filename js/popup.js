@@ -21,12 +21,9 @@ $(function() {
 
 
     ele.upload.on('click', function() {
-        chrome.tabs.create({url: 'http://mgt.shruomei.cn/mall/single-add?from=ext_wsy'}, function(tab) {
+        chrome.tabs.create({url: 'http://192.168.1.1/mall/single-add?from=ext_wsy'}, function(tab) {
             // chrome.tabs.executeScript(tab.id, {file: 'js/test.js'});
         });
-        // chrome.tabs.create({url: 'http://cms.local/mall/single-add?from=ext_wsy'}, function(tab) {
-        //     // chrome.tabs.executeScript(tab.id, {file: 'js/test.js'});
-        // });
     });
 
     ele.get.on('click', function() {
